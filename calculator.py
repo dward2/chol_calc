@@ -33,7 +33,7 @@ def interface():
         choice = input("Enter your choice: ")
         if choice == '9':
             return
-        elif choice == '1'"
+        elif choice == '1':
             HDL()
 
 
