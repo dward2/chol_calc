@@ -3,9 +3,26 @@ def get_HDL_input():
     HDL_value = int(HDL_input)
     return HDL_value
 
-def HDL():
+def HDL_analysis(HDL_level):
+    if HDL_level > 60:
+        return "normal"
+    elif 40 <= HDL_level < 60:
+        return "Borderline low"
+    else:
+        return "Low"
+
+
+def output_result(test_result, analysis):
+    print("HDL test result is {}.".format(test_result))
+    print("That level is {}.".format(analysis))
     
 
+
+def HDL():
+    test_result = get_HDL_input()
+    analysis = HDL_analysis(test_result)
+    output_result(test_result, analysis)
+    
 
 def interface():
     print("My Program")
